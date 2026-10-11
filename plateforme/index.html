@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emplois du temps — Département de français</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <b>Emplois du temps &amp; salles</b>
+        <span id="brand-sub"></span>
+      </div>
+      <button class="pill" id="status-pill" data-act="nav" data-view="issues"></button>
+      <button class="icon-btn" id="btn-undo" data-act="undo" title="Annuler (Ctrl+Z)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></button>
+      <button class="icon-btn" id="btn-redo" data-act="redo" title="Rétablir (Ctrl+Y)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 14 5-5-5-5"/><path d="M20 9H9.5a5.5 5.5 0 0 0 0 11H13"/></svg></button>
+      <button class="btn" data-act="resolve"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Résoudre les salles</button>
+      <button class="btn primary" data-act="export"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Exporter</button>
+    </header>
+    <nav class="nav" id="nav"></nav>
+    <main class="main" id="main"></main>
+  </div>
+  <div id="modal-root"></div>
+  <div class="toasts" id="toasts"></div>
+  <div id="print-area"></div>
+  <input type="file" id="import-file" accept=".json,application/json" class="hidden">
+
+  <script src="js/data.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
